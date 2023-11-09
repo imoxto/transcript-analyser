@@ -71,6 +71,7 @@ export async function analyzeTranscript(params: { transcript: string }) {
       recommendations: "None",
     };
   }
+  const systemPrompt = `Analyze the transcript`;
   const functionPrompt = {
     name: "analyze_transcript",
     description: "Analysis of the information from the phone call transcript",
@@ -98,13 +99,13 @@ export async function analyzeTranscript(params: { transcript: string }) {
   try {
     result = await cgptRequest({
       userPrompt: params.transcript,
-      systemPrompt: "Analyze the transcript",
+      systemPrompt,
       function: functionPrompt,
     });
   } catch (err) {
     result = await cgptRequest({
       userPrompt: params.transcript,
-      systemPrompt: "Analyze the transcript",
+      systemPrompt,
       function: functionPrompt,
       useHigherContext: true,
     });
