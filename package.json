@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "dotenv -e .env -- ts-node index.ts"
+  },
+  "dependencies": {
+    "dotenv-cli": "^7.3.0",
+    "json5": "^2.2.3",
+    "openai": "^4.17.0",
+    "ts-node": "^10.9.1"
+  }
+}
