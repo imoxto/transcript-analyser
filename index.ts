@@ -134,29 +134,79 @@ export async function analyzeTranscript(params: { transcript: string }) {
 async function main() {
   console.log("Running main");
 
-  const transcript = `A: Hey sweetie! How's college life treating you?
-  B: Oh, Mom! It's been such a whirlwind. I've made some great friends, and my literature
-  class? Absolutely fascinating. We're diving into some classic novels I've never read before.
-  A: That sounds wonderful! I always knew you'd thrive in college. Have you been managing
-  to get enough sleep though? And eating well?
-  B: Mostly! Though, I admit, I've had a few too many late-night pizza runs with my
-  roommate, Jenna. She's from New York and insists she knows all the best pizza spots around.
-  A: (laughs) Well, as long as it's not every night. Speaking of food, have you thought about
-  when you're coming home for Thanksgiving? Your father and I are planning the dinner.
-  B: I've been looking at the train schedules. I think I can get a ticket for the Wednesday
-  afternoon before Thanksgiving. That way, I'll be home by evening.
-  A: Perfect! Oh, and since you've become quite the cook at college, how about you make one
-  of the dishes for dinner? Your grandmother always loved it when the family contributed.
-  B: Really? I'd love to! Jenna taught me this amazing vegan pumpkin pie recipe. It's a
-  twist on the classic, but I think everyone will love it.
-  A: Vegan pumpkin pie? Now that's something new for our table! I'm excited to try it. Just
-  send me the ingredients you'll need, and I'll have everything ready.
-  B: Will do, Mom. I can't wait to be home and see everyone. College is fun, but I've
-  missed you all.
-  A: We've missed you too, darling. But I'm glad you're enjoying yourself. Just remember to
-  study amidst all the fun, okay?
-  B: I promise, Mom. Talk to you soon. Love you!
-   `
+  const transcript = `C: Good morning! It's great to see you again. I hope you're doing well today.
+
+  CL: Morning! Yes, I'm quite excited to discuss the renovation plans. I've been looking forward to this.
+  
+  C: Wonderful. Let's start by reviewing the scope of the project based on our last conversation. You're looking to renovate the kitchen, the master bathroom, and the living room, correct?
+  
+  CL: That's right. The kitchen and the bathroom are my top priorities, but I'd love to hear your ideas for the living room as well.
+  
+  C: Absolutely. For the kitchen, you mentioned wanting to go for a modern look with an emphasis on space and light. We've prepared some designs that include white quartz countertops, sleek cabinetry, and a central island with a built-in sink and dishwasher.
+  
+  CL: Oh, that sounds lovely. I like the idea of a central island. It would be a great place for the family to gather around. What about the lighting?
+  
+  C: We're thinking of installing recessed LED lights for a clean look, along with pendant lights over the island for a stylish accent. Plus, under-cabinet lighting to illuminate the countertops.
+  
+  CL: Perfect. I like that. And the cabinets?
+  
+  C: We've selected a high-gloss finish for the cabinets, which not only looks contemporary but also reflects light to make the space appear larger. We can also incorporate soft-close hinges to add a touch of luxury.
+  
+  CL: I love that. It's the little details that really make a difference. Now, what about the bathroom?
+  
+  C: For the master bathroom, we're proposing a walk-in shower with frameless glass doors and a rainfall showerhead. We can add a double vanity with marble countertops and heated floors for those cold mornings.
+  
+  CL: Heated floors sound amazing. And I've always wanted a rainfall showerhead. What about storage in the bathroom?
+  
+  C: We can build a custom linen closet with plenty of shelves and drawers. Additionally, we can include a built-in medicine cabinet with a mirror that has hidden storage behind it.
+  
+  CL: That would be very useful. Now, regarding the living room, I'm not sure what I want yet.
+  
+  C: The living room is a space where you can really express your style. We can start with a fresh coat of paint and perhaps consider built-in bookshelves or a new fireplace mantle to add character.
+  
+  CL: I do like the idea of built-in bookshelves. They would provide a place to display my book collection and some family photos.
+  
+  C: Exactly. And for the fireplace, we can use natural stone to create a focal point in the room. It would complement the bookshelves nicely.
+  
+  CL: That sounds wonderful. I'm also thinking about the furniture and decor. What are your thoughts on that?
+  
+  C: We have an excellent interior designer who can help you select furniture that is both comfortable and stylish. They can also assist with choosing color schemes and accessories to tie the whole room together.
+  
+  CL: I would appreciate that. I want the space to feel cohesive.
+  
+  C: Definitely. We'll make sure the design flows well from one room to the next. Now, in terms of timeline, we're looking at about three months to complete all the renovations, assuming we don't run into any unforeseen issues.
+  
+  CL: Three months sounds reasonable. What about the budget?
+  
+  C: Based on the materials and labor for the renovations we've discussed, you're looking at approximately $50,000. This includes all the high-end finishes and appliances for the kitchen, the bathroom upgrades, and the living room enhancements.
+  
+  CL: That's within the range I was expecting. Can you provide a detailed quote?
+  
+  C: Of course. I'll have my office send over an itemized quote by tomorrow afternoon. It will break down the costs for materials, labor, design fees, and any additional expenses.
+  
+  CL: Great. I'd also like to discuss the possibility of eco-friendly materials and appliances.
+  
+  C: Absolutely. We can source sustainable materials for the cabinetry and flooring, and choose energy-efficient appliances. It might increase the budget slightly, but it will save you money in the long run on utility bills.
+  
+  CL: That's important to me. I'm willing to invest a bit more for sustainability.
+  
+  C: Understood. I'll make sure to include those options in the quote. Now, do you have any other questions or concerns?
+  
+  CL: Not at the moment. I think we've covered everything for now.
+  
+  C: Excellent. Once you receive the quote, let's schedule a time to go over it together. You can ask any questions you might have, and we can make adjustments as needed.
+  
+  CL: Sounds good. I'm really looking forward to seeing everything come together.
+  
+  C: As are we. We're committed to making your vision a reality. Thank you for trusting us with your home.
+  
+  CL: Thank you for your time and expertise. I'll look out for the quote.
+  
+  C: You're welcome. Have a great day, and we'll talk soon.
+  
+  CL: You too. Goodbye.
+  
+  C: Goodbye.`
 
   // this is exactly how the function will be called in the cloud function
   // Dont change the below lines
