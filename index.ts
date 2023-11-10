@@ -90,7 +90,7 @@ export async function analyzeTranscript(params: { transcript: string }) {
         recommendations: {
           type: "string",
           description:
-            `The recommended actions the participants of the phone call should perform.`,
+            `recommended actions the participants of the phone call should perform.`,
         },
       },
       required: ["summary", "keyPoints", "recommendations"],
