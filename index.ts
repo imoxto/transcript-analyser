@@ -80,17 +80,26 @@ export async function analyzeTranscript(params: { transcript: string }) {
       properties: {
         summary: {
           type: "string",
-          description: `Summarize the transcript.`,
+          description: `Summarize the transcript. The purpose of summaries is to gather key basic information about the circumstances 
+          of the interview and give a concise guide to its contents. Summaries need to include 
+          names, places, events, dates, times, monetary amount and topics appearing in each interview, with indications of how 
+          substantial the reference is and where in the course of the interview the reference 
+          appears.`,
           // description: "Summary of the transcript.",
         },
         keyPoints: {
           type: "string",
-          description: `Key points of the transcript.`,
+          description: `Give me the key points of the transcript. The key points need to include 
+          names, places, events, dates, times, monetary amount and topics appearing in each interview, with indications of how 
+          substantial the reference is and where in the course of the interview the reference 
+          appears.`,
         },
         recommendations: {
           type: "string",
           description:
-            `recommended actions the participants of the phone call should perform.`,
+            `Give me recommended actions the participants of the phone call should perform. The key points need to remind the  
+             the the participants to set reminders for certain time and dates from the transcript. 
+             Analyze the transcript and infer the goals of the speakers and recommend actions that will help the user achieve those goals.`,
         },
       },
       required: ["summary", "keyPoints", "recommendations"],
