@@ -86,55 +86,123 @@ export async function analyzeTranscript(params: { transcript: string }) {
           substantial the reference is and where in the course of the interview the reference 
           appears. 
 
-          here is an example of a transcript:
+          here are some examples:
 
+          Transcription 1
+          A: Good morning, Mr. Smith. I hope you're doing well. I wanted to
+             follow up with you regarding the roofing project. Has the insurance adjuster reached out to
+             schedule an inspection yet?
+          B: Good morning! Thanks for checking in. Yes, the adjuster called me yesterday.
+             They're planning to come by next Tuesday to inspect the damage.
+          A: That's great to hear. It's important that we coordinate closely with the adjuster to ensure
+             that all damages are properly documented. Would it be possible for me or one of our team
+             members to be present during the inspection? It can be helpful to have someone
+             knowledgeable about roofing there to answer any questions or provide clarity.
+          B: I think that's a good idea. I'm not too familiar with roofing specifics, so having an
+             expert there would be beneficial. What time works best for you?
+          A: I appreciate that, Mr. Smith. I can be there at 10 a.m. on Tuesday. Does that align with the
+             adjuster's scheduled time?
+          B: Yes, they mentioned they'd be here around 10:30 a.m., so that should work perfectly.
+          A: Excellent! I'll make sure to be there a bit early to discuss any preliminary concerns with
+             you before the adjuster arrives. In the meantime, if you have any questions or need further
+             information, please don't hesitate to reach out.
+          B: Thank you for being so proactive. I'll see you next Tuesday, then.
+          A: Absolutely, Mr. Smith. We're here to ensure the process goes smoothly for you. See you
+             next week!
+          
 
-          B: So, what sort of toilet facilities did they have at school? 
-          A: 
-          They were in the school yard. There was a row of them. There was one kept locked for the 
-          staff. There was the girls' side and then there was a high wall and then there was the boys' 
-          side, and of course, they were, they had the men come and empty the pans once a week. 
-          B: When you say "empty the pans"… 
-          A: Never conscious of it being done but it was always done. 
-          B: What sort of pans were these? 
-          A: Well, they were metal pans into wooden seats, you see. 
-          B: So, each toilet…? 
-          A: Had a wooden seat and metal pan. 
-          B: Can you … 
-          A: No chains or anything. 
-          B: Can you remember what they were like to use? 
-          A: Horrible. Well, I thought they were. 
-          B: Was that very different to what you had at home? What sort of toilet did you have at home? 
-          A: Oh no, we had the same thing at home! Oh yes. Lovely white seat because my sister and I 
-          used to scrub it. 
-          B: What happened to the pan at home? 
-          A: My father emptied that. That went down the fields. 
-          B: Did it? 
-          A: Buried. So we never had an accumulation, it was always kept very nice. 
-          B: So, the school ones weren't, you said they weren't, you didn't like using them? 
-          A: I didn't like it but then I was a bit finicky anyway.
+          Here is the summary for transcript 1: 
 
-          here is the summary: 
-         
-
-          Cleaning School : Describes school cleaning. One piano for three classes. No central heating. Coal 
-          fire and guard. Later, a stove. Big boiler at side of school. Grandfather stoked 
-          boiler. Grandma cleaned school Friday night. Recalls helping to clean brass taps on washbasins; grandma gave her 6d for helping.  
-
-          School Toilets: Describes toilets in schoolyard—one locked for staff. Men emptied the pans 
-          (metal pans/wooden seats) once a week. Horrible to use. Had same at home—but 
-          lovely white seat—father buried contents in fields. Was “a bit finicky”.
+          The roofing salesperson reached out to Mr. Smith to inquire if the insurance adjuster had
+scheduled an inspection for the roofing project. Mr. Smith confirmed that the adjuster would be
+coming next Tuesday around 10:30 a.m. The salesperson offered to be present during the
+inspection to provide expertise, and they agreed to meet slightly before the adjuster's arrival.
           `,
           // description: "Summary of the transcript.",
         },
         keyPoints: {
           type: "string",
-          description: "Key points of the transcript.",
+          description: `Key points of the transcript.
+          Here are some examples:
+
+          Transcription 1
+          A: Good morning, Mr. Smith. I hope you're doing well. I wanted to
+             follow up with you regarding the roofing project. Has the insurance adjuster reached out to
+             schedule an inspection yet?
+          B: Good morning! Thanks for checking in. Yes, the adjuster called me yesterday.
+             They're planning to come by next Tuesday to inspect the damage.
+          A: That's great to hear. It's important that we coordinate closely with the adjuster to ensure
+             that all damages are properly documented. Would it be possible for me or one of our team
+             members to be present during the inspection? It can be helpful to have someone
+             knowledgeable about roofing there to answer any questions or provide clarity.
+          B: I think that's a good idea. I'm not too familiar with roofing specifics, so having an
+             expert there would be beneficial. What time works best for you?
+          A: I appreciate that, Mr. Smith. I can be there at 10 a.m. on Tuesday. Does that align with the
+             adjuster's scheduled time?
+          B: Yes, they mentioned they'd be here around 10:30 a.m., so that should work perfectly.
+          A: Excellent! I'll make sure to be there a bit early to discuss any preliminary concerns with
+             you before the adjuster arrives. In the meantime, if you have any questions or need further
+             information, please don't hesitate to reach out.
+          B: Thank you for being so proactive. I'll see you next Tuesday, then.
+          A: Absolutely, Mr. Smith. We're here to ensure the process goes smoothly for you. See you
+             next week!
+          
+
+          Here are the key points for transcript 1: 
+
+          ● Roofing salesperson inquired about the insurance adjuster's inspection schedule.
+          ● Mr. Smith confirmed the adjuster's visit for next Tuesday at 10:30 a.m.
+          ● Salesperson offered to be present during the inspection for expertise.
+          ● They agreed to meet before the adjuster's arrival.
+          ● Schedule the Date: Mark the date and time (next Tuesday, around 10 a.m.) in the
+          calendar or scheduling system.
+          ● Prepare Documentation: Gather any relevant roofing project details, past assessments,
+          or proposals to have on hand during the inspection.
+          
+          `,
         },
         recommendations: {
           type: "string",
           description:
-            "The recommended actions the participants of the phone call should perform.",
+            `The recommended actions the participants of the phone call should perform.
+            Here are some examples:
+
+          Transcription 1
+          A: Good morning, Mr. Smith. I hope you're doing well. I wanted to
+             follow up with you regarding the roofing project. Has the insurance adjuster reached out to
+             schedule an inspection yet?
+          B: Good morning! Thanks for checking in. Yes, the adjuster called me yesterday.
+             They're planning to come by next Tuesday to inspect the damage.
+          A: That's great to hear. It's important that we coordinate closely with the adjuster to ensure
+             that all damages are properly documented. Would it be possible for me or one of our team
+             members to be present during the inspection? It can be helpful to have someone
+             knowledgeable about roofing there to answer any questions or provide clarity.
+          B: I think that's a good idea. I'm not too familiar with roofing specifics, so having an
+             expert there would be beneficial. What time works best for you?
+          A: I appreciate that, Mr. Smith. I can be there at 10 a.m. on Tuesday. Does that align with the
+             adjuster's scheduled time?
+          B: Yes, they mentioned they'd be here around 10:30 a.m., so that should work perfectly.
+          A: Excellent! I'll make sure to be there a bit early to discuss any preliminary concerns with
+             you before the adjuster arrives. In the meantime, if you have any questions or need further
+             information, please don't hesitate to reach out.
+          B: Thank you for being so proactive. I'll see you next Tuesday, then.
+          A: Absolutely, Mr. Smith. We're here to ensure the process goes smoothly for you. See you
+             next week!
+          
+
+             Here are some recomended actions for transcript 1:
+
+             ● Calendar Alert: Set a reminder for 10 a.m. next Tuesday, with a 30-minute prior alert.
+             ● Compile Project Notes: Retrieve past notes and assessments related to Mr. Smith's
+             project.
+             ● Brief Team: Update team members on the inspection and gather necessary
+             materials/tools.
+             ● Review Insurance Notes: Revisit details from past discussions about Mr. Smith's
+             insurance.
+             ● List Talking Points: Note key topics for the pre-inspection chat with Mr. Smith.
+             ● Set Monday Reminder: Schedule a quick review for Monday evening to ensure
+             readiness.
+             ● Check-in with Client: Send a brief text or email to Mr. Smith confirming Tuesday's plans.`,
         },
       },
       required: ["summary", "keyPoints", "recommendations"],
