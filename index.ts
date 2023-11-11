@@ -82,59 +82,24 @@ export async function analyzeTranscript(params: { transcript: string }) {
           type: "string",
           description: `Summarize the transcript. The purpose of summaries is to gather key basic information about the circumstances 
           of the interview and give a concise guide to its contents. Summaries need to include 
-          names, places, events and topics appearing in each interview, with indications of how 
+          names, places, events, dates, times, monetary amount and topics appearing in each interview, with indications of how 
           substantial the reference is and where in the course of the interview the reference 
-          appears. 
+          appears.`,
 
-          here is an example of a transcript:
-
-
-          B: So, what sort of toilet facilities did they have at school? 
-          A: 
-          They were in the school yard. There was a row of them. There was one kept locked for the 
-          staff. There was the girls' side and then there was a high wall and then there was the boys' 
-          side, and of course, they were, they had the men come and empty the pans once a week. 
-          B: When you say "empty the pans"… 
-          A: Never conscious of it being done but it was always done. 
-          B: What sort of pans were these? 
-          A: Well, they were metal pans into wooden seats, you see. 
-          B: So, each toilet…? 
-          A: Had a wooden seat and metal pan. 
-          B: Can you … 
-          A: No chains or anything. 
-          B: Can you remember what they were like to use? 
-          A: Horrible. Well, I thought they were. 
-          B: Was that very different to what you had at home? What sort of toilet did you have at home? 
-          A: Oh no, we had the same thing at home! Oh yes. Lovely white seat because my sister and I 
-          used to scrub it. 
-          B: What happened to the pan at home? 
-          A: My father emptied that. That went down the fields. 
-          B: Did it? 
-          A: Buried. So we never had an accumulation, it was always kept very nice. 
-          B: So, the school ones weren't, you said they weren't, you didn't like using them? 
-          A: I didn't like it but then I was a bit finicky anyway.
-
-          here is the summary: 
-         
-
-          Cleaning School : Describes school cleaning. One piano for three classes. No central heating. Coal 
-          fire and guard. Later, a stove. Big boiler at side of school. Grandfather stoked 
-          boiler. Grandma cleaned school Friday night. Recalls helping to clean brass taps on washbasins; grandma gave her 6d for helping.  
-
-          School Toilets: Describes toilets in schoolyard—one locked for staff. Men emptied the pans 
-          (metal pans/wooden seats) once a week. Horrible to use. Had same at home—but 
-          lovely white seat—father buried contents in fields. Was “a bit finicky”.
-          `,
-          // description: "Summary of the transcript.",
         },
         keyPoints: {
           type: "string",
-          description: "Key points of the transcript.",
+          description: `Give me the key points of the transcript. The key points need to include 
+          names, places, events, dates, times, monetary amount and topics appearing in each interview, with indications of how 
+          substantial the reference is and where in the course of the interview the reference 
+          appears.`,
         },
         recommendations: {
           type: "string",
           description:
-            "The recommended actions the participants of the phone call should perform.",
+            `Give me recommended actions the participants of the phone call should perform. The key points need to remind the  
+             the the participants to set reminders for certain time and dates from the transcript. 
+             Analyze the transcript and infer the goals of the speakers and recommend actions that will help the user achieve those goals. Also remember to refer to any future plans made in the transcript.`,
         },
       },
       required: ["summary", "keyPoints", "recommendations"],
@@ -177,35 +142,80 @@ export async function analyzeTranscript(params: { transcript: string }) {
 
 async function main() {
   console.log("Running main");
-  // test with different transcripts
-  //   const transcript = `A: Hello, how are you?
-  // B: I'm good, how are you?
-  // A: I'm good.
-  // B: That's good.
-  // A: Yes.
-  // B: No.
-  // A: Maybe.
-  // B: I don't know.
-  // A: Okay.
-  // B: Bye.`;
-  const transcript = `A: There were, there was the infants' room. Next to that was the middle one, school, and then 
-                         you went up into the next one, which was, into the next room, which was divided by a 
-                         screen. That was all that it was. Just a screen across the… 
-                      B: What was the… 
-                      A: So if the headmaster shouted while we were in this class you could hear every word of what 
-                         he was saying. Anybody got the cane, you could hear it. 
-                      B: What was the dividing wall for, or screen for? 
-                      A: Well, it was so that if there was an assembly of any kind, it could be opened but it didn't 
-                         happen very often, only when the school was hired for the village, local village show or 
-                         something like that. We had one piano for those three classes and of course there were no 
-                         central heating then and we had a coal fire in the, with a guard round it. Then it eventually 
-                         got to a stove, and I think before I left school, the school, I think all that was done away with 
-                         and it was central heating then. But the other heat was from a big boiler at the side of the 
-                         school which my grandfather used to stoke morning and evening, and that kept the hot water 
-                         going. And on Friday nights my grandma had to clean the school thoroughly and we used to 
-                         go, my sister and I, and they were brass taps on the wash basins, and we used to go and 
-                         polish the brass taps for her and do all the wash basins and she used to give us sixpence each 
-                         for doing that. `
+
+  const transcript = `C: Good morning! It's great to see you again. I hope you're doing well today.
+
+  CL: Morning! Yes, I'm quite excited to discuss the renovation plans. I've been looking forward to this.
+  
+  C: Wonderful. Let's start by reviewing the scope of the project based on our last conversation. You're looking to renovate the kitchen, the master bathroom, and the living room, correct?
+  
+  CL: That's right. The kitchen and the bathroom are my top priorities, but I'd love to hear your ideas for the living room as well.
+  
+  C: Absolutely. For the kitchen, you mentioned wanting to go for a modern look with an emphasis on space and light. We've prepared some designs that include white quartz countertops, sleek cabinetry, and a central island with a built-in sink and dishwasher.
+  
+  CL: Oh, that sounds lovely. I like the idea of a central island. It would be a great place for the family to gather around. What about the lighting?
+  
+  C: We're thinking of installing recessed LED lights for a clean look, along with pendant lights over the island for a stylish accent. Plus, under-cabinet lighting to illuminate the countertops.
+  
+  CL: Perfect. I like that. And the cabinets?
+  
+  C: We've selected a high-gloss finish for the cabinets, which not only looks contemporary but also reflects light to make the space appear larger. We can also incorporate soft-close hinges to add a touch of luxury.
+  
+  CL: I love that. It's the little details that really make a difference. Now, what about the bathroom?
+  
+  C: For the master bathroom, we're proposing a walk-in shower with frameless glass doors and a rainfall showerhead. We can add a double vanity with marble countertops and heated floors for those cold mornings.
+  
+  CL: Heated floors sound amazing. And I've always wanted a rainfall showerhead. What about storage in the bathroom?
+  
+  C: We can build a custom linen closet with plenty of shelves and drawers. Additionally, we can include a built-in medicine cabinet with a mirror that has hidden storage behind it.
+  
+  CL: That would be very useful. Now, regarding the living room, I'm not sure what I want yet.
+  
+  C: The living room is a space where you can really express your style. We can start with a fresh coat of paint and perhaps consider built-in bookshelves or a new fireplace mantle to add character.
+  
+  CL: I do like the idea of built-in bookshelves. They would provide a place to display my book collection and some family photos.
+  
+  C: Exactly. And for the fireplace, we can use natural stone to create a focal point in the room. It would complement the bookshelves nicely.
+  
+  CL: That sounds wonderful. I'm also thinking about the furniture and decor. What are your thoughts on that?
+  
+  C: We have an excellent interior designer who can help you select furniture that is both comfortable and stylish. They can also assist with choosing color schemes and accessories to tie the whole room together.
+  
+  CL: I would appreciate that. I want the space to feel cohesive.
+  
+  C: Definitely. We'll make sure the design flows well from one room to the next. Now, in terms of timeline, we're looking at about three months to complete all the renovations, assuming we don't run into any unforeseen issues.
+  
+  CL: Three months sounds reasonable. What about the budget?
+  
+  C: Based on the materials and labor for the renovations we've discussed, you're looking at approximately $50,000. This includes all the high-end finishes and appliances for the kitchen, the bathroom upgrades, and the living room enhancements.
+  
+  CL: That's within the range I was expecting. Can you provide a detailed quote?
+  
+  C: Of course. I'll have my office send over an itemized quote by tomorrow afternoon. It will break down the costs for materials, labor, design fees, and any additional expenses.
+  
+  CL: Great. I'd also like to discuss the possibility of eco-friendly materials and appliances.
+  
+  C: Absolutely. We can source sustainable materials for the cabinetry and flooring, and choose energy-efficient appliances. It might increase the budget slightly, but it will save you money in the long run on utility bills.
+  
+  CL: That's important to me. I'm willing to invest a bit more for sustainability.
+  
+  C: Understood. I'll make sure to include those options in the quote. Now, do you have any other questions or concerns?
+  
+  CL: Not at the moment. I think we've covered everything for now.
+  
+  C: Excellent. Once you receive the quote, let's schedule a time to go over it together. You can ask any questions you might have, and we can make adjustments as needed.
+  
+  CL: Sounds good. I'm really looking forward to seeing everything come together.
+  
+  C: As are we. We're committed to making your vision a reality. Thank you for trusting us with your home.
+  
+  CL: Thank you for your time and expertise. I'll look out for the quote.
+  
+  C: You're welcome. Have a great day, and we'll talk soon.
+  
+  CL: You too. Goodbye.
+  
+  C: Goodbye.`
 
   // this is exactly how the function will be called in the cloud function
   // Dont change the below lines
