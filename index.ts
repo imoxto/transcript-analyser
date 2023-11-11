@@ -85,7 +85,7 @@ export async function analyzeTranscript(params: { transcript: string }) {
           names, places, events, dates, times, monetary amount and topics appearing in each interview, with indications of how 
           substantial the reference is and where in the course of the interview the reference 
           appears.`,
-          // description: "Summary of the transcript.",
+
         },
         keyPoints: {
           type: "string",
@@ -99,7 +99,7 @@ export async function analyzeTranscript(params: { transcript: string }) {
           description:
             `Give me recommended actions the participants of the phone call should perform. The key points need to remind the  
              the the participants to set reminders for certain time and dates from the transcript. 
-             Analyze the transcript and infer the goals of the speakers and recommend actions that will help the user achieve those goals.`,
+             Analyze the transcript and infer the goals of the speakers and recommend actions that will help the user achieve those goals. Also remember to refer to any future plans made in the transcript.`,
         },
       },
       required: ["summary", "keyPoints", "recommendations"],
